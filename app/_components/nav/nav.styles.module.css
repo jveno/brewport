@@ -1,0 +1,64 @@
+nav.main a {
+  position: relative;
+  color: #000;
+  font-weight: 500;
+  margin: 0 0.75rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+nav.main a:hover, nav.main a.active {
+  color: #cf8f2b;
+  border-bottom: 4px solid #cf8f2b;
+}
+
+nav.main a .wellington {
+  position: absolute;
+  top: -26px;
+  left: 28px;
+  z-index: -1;
+}
+
+nav.menu {
+  padding: 10px 0;
+  border: 1px solid #3c3c3c;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  border-radius: 8px;
+}
+
+nav.menu a {
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+
+/* nav.menu a:hover, nav.menu a.active {
+  color: #3c3c3c;
+  border-bottom: 2px solid #cf8f2b;
+} */
+
+.topmenu {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  justify-content: flex-end;
+  padding: .75rem 0 .25rem 1rem;
+  align-self: flex-end;
+}
+
+.address {
+  margin-right: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.address a, .phone a {
+  font-weight: 400;
+  margin-left: 4px;
+}

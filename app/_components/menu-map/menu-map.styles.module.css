@@ -1,0 +1,59 @@
+.menuList h2 {
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 88px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 8px;
+}
+
+.menuList h3 {
+    text-transform: capitalize;
+    margin-bottom: 0;
+    color: #cf8f2b;
+}
+
+.menuList p {
+    margin-top: 0;
+    color: #666;
+}
+
+.menuList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuList ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.menuList span {
+    font-size: 0.8em;
+    margin-right: 10px;
+    color: #666;
+}
+
+.categoryItems {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.menuItem {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: calc(50% - 44px);
+    margin-right: 44px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 16px;
+}
+
+.menuItemName {
+    padding-right: 24px;
+}

@@ -1,0 +1,20 @@
+nav.menu {
+    padding: 10px 0;
+    border: 1px solid #666;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  nav.menu a {
+   color: #000;
+   text-transform: uppercase;
+   text-decoration: none;
+   margin: 0 0.75rem;
+   transition: all 0.3s ease;
+  }
+  
+  nav.menu a:hover, nav.menu a.active {
+   color: #cf8f2b;
+   border-bottom: 2px solid #cf8f2b;
+  }

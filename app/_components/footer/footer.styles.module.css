@@ -1,0 +1,45 @@
+.footer {
+    background: #222 url('../../../public/img/footer-bg.png') repeat-x center bottom;
+    background-size: contain;
+    color: #fff;
+    padding: 48px 60px 24px 36px;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    font-size: .8rem;
+    color: #cecece;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .footer a:hover, .footer a:focus {
+    text-decoration: underline;
+  }
+
+  .footer .contact {
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  .footer .contact .address {
+    margin-right: 18px;
+    padding-right: 18px;
+    border-right: 1px solid #fff;
+  }
+
+  .footer .contact svg, .footer .email svg {
+    margin-right: 8px;
+  }
+
+  .footer .email {
+    margin-bottom: 24px;
+  }
+

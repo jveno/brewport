@@ -1,0 +1,54 @@
+.blockmenu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.blockmenu a {
+    display: block;
+    width: calc(50% - 50px);
+    background-color: #eee;
+    min-height: 190px;
+    padding: 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    line-height: 190px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 2px solid #666;
+    border-radius: 8px;
+}
+
+.blockmenu a.beer {
+    background: transparent url('../../public/img/paddle.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.blockmenu .pizza {
+    background: transparent url('../../public/img/pizza.jpeg') no-repeat center center;
+    background-size: 100%;
+}
+
+.blockmenu .salad {
+    background: transparent url('../../public/img/salad.jpeg') no-repeat center center;
+    background-size: 100%;
+}
+
+.blockmenu .cocktails {
+    background: transparent url('../../public/img/cocktails.jpeg') no-repeat center center;
+    background-size: 100%;
+}
+
+.blockmenu .wine {
+    background: transparent url('../../public/img/wine.jpeg') no-repeat center center;
+    background-size: 100%;
+}
+
+.blockmenu a:hover {
+    background-size: 120%;
+}

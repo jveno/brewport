@@ -1,0 +1,23 @@
+.masonryGrid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  width: auto;
+}
+.masonryGridColumn {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.masonryGridColumn img {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px; /* gutter size */
+  border: 1px solid #666;
+  transition: all 0.3s;
+}
+
+.masonryGridColumn img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

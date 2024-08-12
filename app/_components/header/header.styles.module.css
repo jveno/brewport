@@ -1,0 +1,52 @@
+.menuHeader {
+    position: fixed;
+    color: #000;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-bottom: 3px solid #3c3c3c;
+    transition: all 0.2s linear;
+    padding-left: 44px;
+    padding-right: 44px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  
+  .menuHeaderSm {
+    position: fixed;
+    color: #000;
+    z-index: 100;
+    top: 0;
+    height: 75px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 40px;
+    padding-right: 45px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #3c3c3c;
+    transition: all 0.2s linear;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  
+  .menuHeaderSm img.logo {
+    margin-top: 15px;
+  }
+  
+  .menuHeaderSm .topmenu {
+    opacity: 0;
+  }
+  
+  .menuHeaderSm a {
+    height: 48px;
+    width: 156px;
+    margin-bottom: 1rem;
+  }

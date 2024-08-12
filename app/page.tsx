@@ -1,95 +1,46 @@
 import Image from "next/image";
+import Link from 'next/link';
+
 import styles from "./page.module.css";
+import Header from "./_components/header/header";
+import Footer from "./_components/footer/footer";
+import Announcements from "./_components/announcements/announcements";
+import { oswald } from "./fonts";
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Header />
+      <div className={styles.banner}></div>
+      <div className={styles.container}>
+        <div className={styles.topSection}>
+          <Announcements />
+        </div>
+        <div className={styles.quote}>
+          Brewport enriches lives with thin crust pizza, gourmet salad, and connecticut style beers so amazingly great, that staff and guests keep coming back for more.
+        </div>
+        <div className={oswald.className}>
+          <div className={styles.blockmenu}>
+            <div className={styles.item}>
+              <Link className={styles.storeBg} href="https://brewport.myshopify.com/">
+                <span className={styles.linkName}>Store</span>
+              </Link>
+            </div>
+            <div className={styles.item}>
+              <Link className={styles.eventsBg} href="/events">
+                <span className={styles.linkName}>Events</span>
+              </Link>
+            </div>
+            <div className={styles.item}>
+              <Link className={styles.foodBg} href="/menu">
+                <span className={styles.linkName}>Food &amp; Beer</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Footer />
+    </>
   );
 }
