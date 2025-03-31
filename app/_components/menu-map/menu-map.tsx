@@ -20,7 +20,7 @@ const MenuMap: React.FC<MenuProps> = ({ menuItems }) => {
                                     <h3 className={oswald.className}>{item.itemName}</h3>
                                     <p>{item.itemDescription}</p>
                                 </div>
-                                <div>
+                                <div className={styles.price}>
                                     <ul>
                                         {item.itemPrices.map((price, index) => (
                                             <li key={index}>

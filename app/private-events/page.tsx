@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation'
 import clsx from "clsx";
 import Button from '@mui/material/Button';
 import Image from "next/image";
@@ -13,6 +14,12 @@ import { ParallaxBanner, ParallaxBannerLayer, ParallaxProvider } from 'react-scr
 import { oswald } from "../fonts";
 
 export default function PrivateEvents() {
+    const router = useRouter();
+
+    const handleClick = () => {
+        console.log('clicked');
+        router.push('/photos');
+    };
     return (
         <>
             <Header />
@@ -83,7 +90,7 @@ export default function PrivateEvents() {
                             <p className={styles.largeText}>
                                 Check out our gallery to see more pictures of our private room!
                             </p>
-                            <Button size="large" variant="contained">
+                            <Button onClick={handleClick} size="large" variant="contained">
                                 View Photos
                             </Button>
                         </div>

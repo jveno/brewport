@@ -66,6 +66,15 @@ import VenueImg28 from "../../public/gallery/venue/venue28.png";
 import VenueImg29 from "../../public/gallery/venue/venue29.png";
 import VenueImg30 from "../../public/gallery/venue/venue30.png";
 
+import lgZoom from 'lightgallery/plugins/zoom';
+import dynamic from 'next/dynamic';
+const LightGallery = dynamic(() => import('lightgallery/react'), {
+    ssr: false
+});
+
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+
 export default function Photos() {
 
     return (
@@ -76,103 +85,196 @@ export default function Photos() {
                     <h1 className={oswald.className}>Photos</h1>
                     <div>
                         <h2 className={oswald.className}>Semi-private Event Room</h2>
-                        <div className={styles.gallery}>
-                            <Masonry
-                                breakpointCols={3}
-                                className={styles.masonryGrid}
-                                columnClassName={styles.masonryGridColumn}>
-
-                                <Image width={1200} height={800} src={SemiPrivateImg1} alt="Semi-private Event Room" />
-                                <Image width={1200} height={800} src={SemiPrivateImg2} alt="Semi-private Event Room" />
-                                <Image width={1200} height={800} src={SemiPrivateImg3} alt="Semi-private Event Room" />
-                                <Image width={1200} height={800} src={SemiPrivateImg4} alt="Semi-private Event Room" />
-                                <Image width={1200} height={800} src={SemiPrivateImg5} alt="Semi-private Event Room" />
-                                <Image width={1200} height={800} src={SemiPrivateImg6} alt="Semi-private Event Room" />
-                            </Masonry>
-                        </div>
+                        <LightGallery elementClassNames={styles.masonryGallery} mode="lg-fade" plugins={[lgZoom]}>
+                            <div className="grid-sizer"></div>
+                            <a href={SemiPrivateImg1.src} data-lg-size="1200-800">
+                                <Image className={styles.imgResponsive} width={400} height={200} src={SemiPrivateImg1} alt="Semi-private Event Room" />
+                            </a>
+                            <a href={SemiPrivateImg2.src} data-lg-size="1200-800">
+                                <Image className={styles.imgResponsive} width={400} height={200} src={SemiPrivateImg2} alt="Semi-private Event Room" />
+                            </a>
+                            <a href={SemiPrivateImg3.src} data-lg-size="1200-800">
+                                <Image className={styles.imgResponsive} width={400} height={200} src={SemiPrivateImg3} alt="Semi-private Event Room" />
+                            </a>
+                            <a href={SemiPrivateImg4.src} data-lg-size="1200-800">
+                                <Image className={styles.imgResponsive} width={400} height={200} src={SemiPrivateImg4} alt="Semi-private Event Room" />
+                            </a>
+                            <a href={SemiPrivateImg5.src} data-lg-size="1200-800">
+                                <Image className={styles.imgResponsive} width={400} height={200} src={SemiPrivateImg5} alt="Semi-private Event Room" />
+                            </a>
+                            <a href={SemiPrivateImg6.src} data-lg-size="1200-800">
+                                <Image className={styles.imgResponsive} width={400} height={200} src={SemiPrivateImg6} alt="Semi-private Event Room" />
+                            </a>
+                        </LightGallery>
                     </div>
                     <div>
                         <h2 className={oswald.className}>Private Event Room</h2>
                         <div className={styles.gallery}>
-                            <Masonry
-                                breakpointCols={3}
-                                className={styles.masonryGrid}
-                                columnClassName={styles.masonryGridColumn}>
-
-                                <Image width={1200} height={800} src={PrivateImg1} alt="Private Event Room" />
-                                <Image width={1200} height={800} src={PrivateImg2} alt="Private Event Room" />
-                                <Image width={1200} height={800} src={PrivateImg3} alt="Private Event Room" />
-                            </Masonry>
+                            <LightGallery mode="lg-fade" plugins={[lgZoom]}>
+                                <a href={PrivateImg1.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={PrivateImg1} alt="Private Event Room" />
+                                </a>
+                                <a href={PrivateImg2.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={PrivateImg2} alt="Private Event Room" />
+                                </a>
+                                <a href={PrivateImg3.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={PrivateImg3} alt="Private Event Room" />
+                                </a>
+                            </LightGallery>
                         </div>
                     </div>
 
                     <div>
                         <h2 className={oswald.className}>Food &amp; Drinks</h2>
                         <div className={styles.gallery}>
-                            <Masonry
-                                breakpointCols={5}
-                                className={styles.masonryGrid}
-                                columnClassName={styles.masonryGridColumn}>
-
-                                <Image width={1200} height={800} src={FoodDrink1} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink2} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink3} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink4} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink5} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink6} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink7} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink8} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink9} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink10} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink11} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink12} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink13} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink14} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink15} alt="Food and Drinks" />
-                                <Image width={1200} height={800} src={FoodDrink16} alt="Food and Drinks" />
-                            </Masonry>
+                            <LightGallery mode="lg-fade" plugins={[lgZoom]}>
+                                <a href={FoodDrink1.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={600} src={FoodDrink1} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink2.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={225} src={FoodDrink2} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink3.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink3} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink4.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink4} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink5.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink5} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink6.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink6} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink7.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink7} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink8.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink8} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink9.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink9} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink10.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink10} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink11.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink11} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink12.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink12} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink13.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink13} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink14.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink14} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink15.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink15} alt="Food and Drinks" />
+                                </a>
+                                <a href={FoodDrink16.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={FoodDrink16} alt="Food and Drinks" />
+                                </a>
+                            </LightGallery>
                         </div>
                     </div>
 
                     <div>
                         <h2 className={oswald.className}>Venue</h2>
                         <div className={styles.gallery}>
-                            <Masonry
-                                breakpointCols={5}
-                                className={styles.masonryGrid}
-                                columnClassName={styles.masonryGridColumn}>
-
-                                <Image width={1200} height={800} src={VenueImg1} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg2} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg3} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg4} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg5} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg6} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg7} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg8} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg9} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg10} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg11} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg12} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg13} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg14} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg15} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg16} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg17} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg18} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg19} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg20} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg21} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg22} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg23} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg24} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg25} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg26} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg27} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg28} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg29} alt="Venue" />
-                                <Image width={1200} height={800} src={VenueImg30} alt="Venue" />
-                            </Masonry>
+                            <LightGallery mode="lg-fade" plugins={[lgZoom]}>
+                                <a href={VenueImg1.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg1} alt="Venue" />
+                                </a>
+                                <a href={VenueImg2.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg2} alt="Venue" />
+                                </a>
+                                <a href={VenueImg3.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg3} alt="Venue" />
+                                </a>
+                                <a href={VenueImg4.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg4} alt="Venue" />
+                                </a>
+                                <a href={VenueImg5.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg5} alt="Venue" />
+                                </a>
+                                <a href={VenueImg6.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg6} alt="Venue" />
+                                </a>
+                                <a href={VenueImg7.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg7} alt="Venue" />
+                                </a>
+                                <a href={VenueImg8.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg8} alt="Venue" />
+                                </a>
+                                <a href={VenueImg9.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg9} alt="Venue" />
+                                </a>
+                                <a href={VenueImg10.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg10} alt="Venue" />
+                                </a>
+                                <a href={VenueImg11.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg11} alt="Venue" />
+                                </a>
+                                <a href={VenueImg12.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg12} alt="Venue" />
+                                </a>
+                                <a href={VenueImg13.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg13} alt="Venue" />
+                                </a>
+                                <a href={VenueImg14.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg14} alt="Venue" />
+                                </a>
+                                <a href={VenueImg15.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg15} alt="Venue" />
+                                </a>
+                                <a href={VenueImg16.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg16} alt="Venue" />
+                                </a>
+                                <a href={VenueImg17.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg17} alt="Venue" />
+                                </a>
+                                <a href={VenueImg18.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg18} alt="Venue" />
+                                </a>
+                                <a href={VenueImg19.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg19} alt="Venue" />
+                                </a>
+                                <a href={VenueImg20.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg20} alt="Venue" />
+                                </a>
+                                <a href={VenueImg21.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg21} alt="Venue" />
+                                </a>
+                                <a href={VenueImg22.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg22} alt="Venue" />
+                                </a>
+                                <a href={VenueImg23.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg23} alt="Venue" />
+                                </a>
+                                <a href={VenueImg24.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg24} alt="Venue" />
+                                </a>
+                                <a href={VenueImg25.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg25} alt="Venue" />
+                                </a>
+                                <a href={VenueImg26.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg26} alt="Venue" />
+                                </a>
+                                <a href={VenueImg27.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg27} alt="Venue" />
+                                </a>
+                                <a href={VenueImg28.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg28} alt="Venue" />
+                                </a>
+                                <a href={VenueImg29.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg29} alt="Venue" />
+                                </a>
+                                <a href={VenueImg30.src} data-lg-size="1200-800">
+                                    <Image className={styles.imgResponsive} width={400} height={200} src={VenueImg30} alt="Venue" />
+                                </a>
+                            </LightGallery>
                         </div>
                     </div>
 

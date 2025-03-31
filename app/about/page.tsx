@@ -9,8 +9,9 @@ import { Button } from "@mui/material";
 import styles from './about.styles.module.css';
 import Footer from "../_components/footer/footer";
 import Header from "../_components/header/header";
-import AboutImgLeft from "../../public/img/about-1.jpeg";
+import AboutImgLeft from "../../public/gallery/fooddrink/fooddrink12.png";
 import AboutImgRight from "../../public/img/about-2.jpeg";
+import SeatingImg from "../../public/img/about-1.jpeg";
 import { oswald } from '../fonts';
 
 export default function About() {
@@ -91,7 +92,7 @@ export default function About() {
                 <section>
                     <div className={styles.seatingContainer}>
                         <div className={styles.seatingImg}>
-                            <Image src={AboutImgLeft} alt="Brewport" />
+                            <Image src={SeatingImg} alt="Brewport" />
                         </div>
                         <div className={styles.seating}>
                             <h2 className={oswald.className}>Seating</h2>
